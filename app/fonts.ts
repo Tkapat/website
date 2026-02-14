@@ -1,4 +1,4 @@
-import {Ubuntu,Monoton,Leckerli_One,Audiowide,Poiret_One} from "next/font/google";
+import {Ubuntu,Monoton,Leckerli_One,Audiowide,Poiret_One,JetBrains_Mono} from "next/font/google";
 
 
 export const  ubuntu=Ubuntu({
@@ -32,4 +32,8 @@ export const  audiowide=Audiowide({
 export const  poiret=Poiret_One({
     subsets:["latin"],
     weight:'400',
+})
+export const  jetbrains=JetBrains_Mono({
+    subsets:["latin"],
+    weight:'100',
 })

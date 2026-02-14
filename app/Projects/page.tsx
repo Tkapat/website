@@ -1,11 +1,13 @@
 'use client'
 
-import { ubuntu, ubuntulight, ubuntubold, leckerli, ubuntumd, audiowide, poiret } from "@/app/fonts";
+import { ubuntu, ubuntulight, ubuntubold, leckerli, ubuntumd, audiowide, poiret,jetbrains } from "@/app/fonts";
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { useRouter } from "next/navigation";
+import { GoLinkExternal } from "react-icons/go";
 import { FullPage } from "../components/Animations";
 import GlassSurface from "../components/GlassSurface";
 import gsap from 'gsap';
+import Link from "next/link";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,7 +18,7 @@ const projectdata = [
     {
         id: 1,
         sectionNumber: "01",
-        title: "V I D Y A",
+        title: "< V I D Y A >",
         link: "https://vidya-rouge.vercel.app/",
         description: "A smart School management system",
         tech_stack: "Projects",
@@ -93,7 +95,7 @@ export default function Projects() {
                 </video>
                 <div className=" h-screen w-screen justify-center items-center flex " >
 
-                    <div key={activeIndex} className="h-[70%] lg:h-[90%] md:h-[90%] sm:h-[80%] w-[90%] -top-10 sm:-top-10 md:top-0 lg:top-0 backdrop-blur-[10px] border-[1px] border-white/50 rounded-[10px] flex  p-2  snap-start touch-none z-0 relative" >
+                    <div key={activeIndex} className="h-[70%] lg:h-[90%] md:h-[90%] sm:h-[80%] w-[90%] -top-10 sm:-top-10 md:top-0 lg:top-0 backdrop-blur-[10px] border-[1px] border-white/50 rounded-[10px] flex justify-center p-2  snap-start touch-none z-0 relative" >
                         <div className={`${audiowide.className} w-full flex fixed justify-center text-[1.5rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem] text-white `}>
                             <div  className="  px-5 py-2 " >
                                 {projectdata[activeIndex].title}
@@ -102,6 +104,9 @@ export default function Projects() {
                         <div className={`${poiret.className}  flex  fixed top-15 sm:top-15 md:top-18 lg:top-18 w-full justify-center text-[12px] sm:text-[12px] md:text-[16px] lg:text-[16px] text-white `}>
                             {projectdata[activeIndex].description}
                         </div>
+                        <Link href={`${projectdata[activeIndex].link}`} target="_blank" className={`${jetbrains.className}  flex  fixed top-7 right-0 sm:top-20 md:top-18 lg:top-10 lg:right-5 w-[3rem]  text-[10px] sm:text-[12px] md:text-[16px] lg:text-[16px] text-white   `}>
+                            <GoLinkExternal size={20}/>
+                        </Link>
                     </div>
                 </div>
             </FullPage>

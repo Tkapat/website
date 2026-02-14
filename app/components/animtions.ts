@@ -69,7 +69,7 @@ export const rotate = (element: HTMLElement | null, isActive: boolean) => {
     return gsap.to(element, {
         rotate:isActive?45:0,
         scale:isActive?1.3:1,
-        x:isActive?30:0,
+        x:isActive?0:0,
         transition:3,
         ease: isActive ? 'back.out(2)' : 'power2.out',
         overwrite: true,
@@ -81,12 +81,17 @@ export const fullPage = (element: HTMLElement | null, isActive: boolean) => {
     if (!element) return;
     return gsap.fromTo(element,{
         opacity:0,
+        x:-100,
         duration:1,
     },{
         duration:0.8,
+        x:0,
         opacity:1,
+        ease: "power2.out", 
     })
 };
+
+
 export const cards = (element: HTMLElement | null, isActive: boolean) => {
     if (!element) return;
     return gsap.fromTo(element,{
