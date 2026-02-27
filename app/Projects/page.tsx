@@ -22,7 +22,8 @@ const projectdata = [
         link: "https://vidya-rouge.vercel.app/",
         description: "A smart School management system",
         tech_stack: "Projects",
-        features: ""
+        features: "A school management system that gives you the accessibility to manage student's list, attendance and other biodata easily. Also you can drop a direct message to teacher for doubt.",
+        frontend:"Next.js, Tailwind-css"
     },
 
 ];
@@ -94,6 +95,7 @@ export default function Projects() {
                     <source src="/cosmos.mp4" type="video/mp4" />
                 </video>
                 <div className=" h-screen w-screen justify-center items-center flex " >
+                    
 
                     <div key={activeIndex} className="h-[70%] lg:h-[90%] md:h-[90%] sm:h-[80%] w-[90%] -top-10 sm:-top-10 md:top-0 lg:top-0 backdrop-blur-[10px] border-[1px] border-white/50 rounded-[10px] flex justify-center p-2  snap-start touch-none z-0 relative" >
                         <div className={`${audiowide.className} w-full flex fixed justify-center text-[1.5rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem] text-white `}>
@@ -107,6 +109,14 @@ export default function Projects() {
                         <Link href={`${projectdata[activeIndex].link}`} target="_blank" className={`${jetbrains.className}  flex  fixed top-7 right-0 sm:top-20 md:top-18 lg:top-10 lg:right-5 w-[3rem]  text-[10px] sm:text-[12px] md:text-[16px] lg:text-[16px] text-white   `}>
                             <GoLinkExternal size={20}/>
                         </Link>
+                        <div className="grid grid-cols-2 grid-cols-[50% 50%]  ">
+                        <div className={`${jetbrains.className}  flex p-6 rounded-[1rem] border-[1px] border-white/60 bg-black/60 fixed top-25 sm:top-15 md:top-18 lg:top-35 w-80 sm:w-80 md:w-150 lg:w-150 justify-center text-[11px] sm:text-[11px] md:text-[14px] lg:text-[14px] text-white  `}>
+                            {projectdata[activeIndex].features}
+                        </div>
+                        <div className={`${jetbrains.className}  flex p-6 rounded-[1rem] border-[1px] border-white/60 bg-black/0 fixed left-60 top-35 sm:top-15 md:top-18 lg:top-75 w-80 sm:w-80 md:w-150 lg:w-80 justify-center text-[11px] sm:text-[11px] md:text-[14px] lg:text-[14px] text-white  `}>
+                            {projectdata[activeIndex].frontend}
+                        </div>
+                        </div>
                     </div>
                 </div>
             </FullPage>
