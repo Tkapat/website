@@ -97,7 +97,8 @@ export default function Projects() {
                 <div className=" h-screen w-screen justify-center items-center flex " >
                     
 
-                    <div key={activeIndex} className="h-[70%] lg:h-[90%] md:h-[90%] sm:h-[80%] w-[90%] -top-10 sm:-top-10 md:top-0 lg:top-0 backdrop-blur-[10px] border-[1px] border-white/50 rounded-[10px] flex justify-center p-2  snap-start touch-none z-0 relative" >
+                    <div key={activeIndex} className="h-[75%] lg:h-[90%] md:h-[90%] sm:h-[80%] w-[90%] -top-10 sm:-top-10 md:top-0 lg:top-0 backdrop-blur-[10px] border-[1px] border-white/50 rounded-[10px] flex justify-center p-2  snap-start touch-none z-0 relative" >
+                    
                         <div className={`${audiowide.className} w-full flex fixed justify-center text-[1.5rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2rem] text-white `}>
                             <div  className="  px-5 py-2 " >
                                 {projectdata[activeIndex].title}
@@ -109,12 +110,14 @@ export default function Projects() {
                         <Link href={`${projectdata[activeIndex].link}`} target="_blank" className={`${jetbrains.className}  flex  fixed top-7 right-0 sm:top-20 md:top-18 lg:top-10 lg:right-5 w-[3rem]  text-[10px] sm:text-[12px] md:text-[16px] lg:text-[16px] text-white   `}>
                             <GoLinkExternal size={20}/>
                         </Link>
+                        <div className=" h-[80%] lg:h-[80%] md:h-[90%] sm:h-[80%] w-[90%] lg:w-[95%] top-25 sm:-top-10 md:top-0 lg:top-30 backdrop-blur-[10px] border-[1px] border-white/50 rounded-[10px] flex justify-center p-2  snap-start z-0 fixed" >
                         <div className="grid grid-cols-2 grid-cols-[50% 50%]  ">
-                        <div className={`${jetbrains.className}  flex p-6 rounded-[1rem] rounded-tr-[6px] border-[1px] border-white/60 bg-black/60 fixed top-25 sm:top-15 md:top-18 lg:top-35 w-65 sm:w-65 md:w-150 lg:w-150 right-6 sm:right-16 md:right-16 lg:right-16 justify-center text-[11px] sm:text-[11px] md:text-[14px] lg:text-[14px] text-white  `}>
+                        <div className={`${jetbrains.className}  flex p-6 rounded-[1rem] rounded-tr-[6px] border-[1px] border-white/60 bg-black/60 fixed top-5 sm:top-5 md:top-5 lg:top-5 w-65 sm:w-65 md:w-150 lg:w-150 right-2 sm:right-2 md:right-5 lg:right-5 justify-center text-[11px] sm:text-[11px] md:text-[14px] lg:text-[14px] text-white  `}>
                             {projectdata[activeIndex].features}
                         </div>
                         <div className={`${jetbrains.className}  flex p-6 rounded-[1rem] rounded-tl-[6px] border-[1px] border-white/60 bg-black/0 fixed left-6 sm:left-16 md:left-16 lg:left-16 top-70 sm:top-70 md:top-18 lg:top-75  w-65 sm:w-80 md:w-150 lg:w-80 justify-center text-[11px] sm:text-[11px] md:text-[14px] lg:text-[14px] text-white  `}>
                             {projectdata[activeIndex].frontend}
+                        </div>
                         </div>
                         </div>
                     </div>
