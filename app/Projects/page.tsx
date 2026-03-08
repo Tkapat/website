@@ -110,10 +110,10 @@ export default function Projects() {
                             <GoLinkExternal size={20}/>
                         </Link>
                         <div className="grid grid-cols-2 grid-cols-[50% 50%]  ">
-                        <div className={`${jetbrains.className}  flex p-6 rounded-[1rem] border-[1px] border-white/60 bg-black/60 fixed top-25 sm:top-15 md:top-18 lg:top-35 w-80 sm:w-80 md:w-150 lg:w-150 justify-center text-[11px] sm:text-[11px] md:text-[14px] lg:text-[14px] text-white  `}>
+                        <div className={`${jetbrains.className}  flex p-6 rounded-[1rem] rounded-tr-[6px] border-[1px] border-white/60 bg-black/60 fixed top-25 sm:top-15 md:top-18 lg:top-35 w-65 sm:w-65 md:w-150 lg:w-150 right-6 sm:right-16 md:right-16 lg:right-16 justify-center text-[11px] sm:text-[11px] md:text-[14px] lg:text-[14px] text-white  `}>
                             {projectdata[activeIndex].features}
                         </div>
-                        <div className={`${jetbrains.className}  flex p-6 rounded-[1rem] border-[1px] border-white/60 bg-black/0 fixed left-60 top-35 sm:top-15 md:top-18 lg:top-75 w-80 sm:w-80 md:w-150 lg:w-80 justify-center text-[11px] sm:text-[11px] md:text-[14px] lg:text-[14px] text-white  `}>
+                        <div className={`${jetbrains.className}  flex p-6 rounded-[1rem] rounded-tl-[6px] border-[1px] border-white/60 bg-black/0 fixed left-6 sm:left-16 md:left-16 lg:left-16 top-70 sm:top-70 md:top-18 lg:top-75  w-65 sm:w-80 md:w-150 lg:w-80 justify-center text-[11px] sm:text-[11px] md:text-[14px] lg:text-[14px] text-white  `}>
                             {projectdata[activeIndex].frontend}
                         </div>
                         </div>
